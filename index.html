@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notes in Silence</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Notes in Silence</h1>
+  <p class="subtitle">Essays written slowly</p>
+
+  <input id="searchInput" placeholder="Search essays…" onkeyup="searchArticles()">
+
+  <button onclick="toggleDarkMode()">☾</button>
+</header>
+
+<main id="essayList"></main>
+
+<footer>
+  <a href="tags.html">Themes</a> · <a href="rss.xml">RSS</a>
+</footer>
+
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+<script src="articles.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
